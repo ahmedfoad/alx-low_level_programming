@@ -1,36 +1,32 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 
 int main(void)
-
 {
-    int n, mod;
-    srand(time(0));
-    n = rand() - RAND_MAX / 10;
-    mod = n % 10;
-    
-        
-    if (mod > 5)
+	int n;
+	int x;
 
-    {
-        printf("Last digit of %d is %d and is greater than 5\n", n, mod);
-    }
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 
-    if (mod = 0)
+	x = n % 10;
+	printf("Last digit of %d is %d ", n, x);
+	if (x > 5)
+	{
+		printf("and is greater than 5");
+	}
+	if (x == 0)
+	{
+		printf("and is 0");
+	}
+	if (x < 6 && x != 0)
+	{
+		printf("and is less than 6 and not 0");
+	}
 
-    {
-        printf("Last digit of %d is %d and is 0\n", n, mod);
-    }
+	printf("\n");
 
-
-
-    if (mod < 6 && mod != 0)
-
-    {
-        printf("Last digit of %d is %d and is less than 6 and not 0\n", n, mod);
-    }
-
-    return (0);
+	return (0);
 }
 
