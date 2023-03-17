@@ -10,14 +10,18 @@
 int main(void)
 {
 	char letter;
+	
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
 		putchar(tolower(letter));
 	}
+	
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
 		putchar(toupper(letter));
-	}	
+	}
+		
 	putchar('\n');	
+	
 	return (0);
 }
