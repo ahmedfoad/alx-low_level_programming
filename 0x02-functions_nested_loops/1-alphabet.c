@@ -5,7 +5,8 @@
  * Return: void
   */
 void print_alphabet (void) {
-	for(char x = 'a'; x <= 'z'; x++)
+	char x;
+	for(x = 'a'; x <= 'z'; x++)
 	{
 		_putchar("%c", x);
 	}
