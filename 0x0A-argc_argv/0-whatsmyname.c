@@ -10,7 +10,7 @@
  * Each string is one of the arguments that was passed to the program
  * Return: Alway 0.
  */
-int main(int argc, char * argv[])
+int main(int argc, char *argv[])
 {
 	printf("%s\n", argv[0]);
 	(void)argc;
