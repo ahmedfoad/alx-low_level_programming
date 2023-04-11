@@ -21,7 +21,6 @@ char *_strdup(char *str)
 	}
 
 	size = 0;
-	i = 0;
 	while (str[size] != '\0')
 	{
 		size++;
@@ -29,16 +28,14 @@ char *_strdup(char *str)
 
 	arr = (char *)malloc((sizeof(char) * size) + 1);
 
-	if (arr == NULL || size <= 0)
+	if (arr == NULL)
 	{
 		return ((void *)0);
 	}
 
-	i = 0;
-	while (i < size)
+	for (i = 0; i < size; i++)
 	{
 		arr[i] = str[i];
-		i++;
 	}
 	arr[size] = '\0';
 	return (arr);
