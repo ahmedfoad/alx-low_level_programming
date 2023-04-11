@@ -14,7 +14,7 @@ char *str_concat(char *s1, char *s2)
 	unsigned int size1, size2, i1, i2;
 	char *copy;
 
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL || s2 == NULL)
 	{
 		return ((void *)0);
 	}
