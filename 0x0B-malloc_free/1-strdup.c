@@ -40,6 +40,6 @@ char *_strdup(char *str)
 		arr[i] = str[i];
 		i++;
 	}
-
+	arr[size] = '\0';
 	return (arr);
 }
