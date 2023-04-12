@@ -14,21 +14,26 @@ char *str_concat(char *s1, char *s2)
 	unsigned int size1, size2, i1, i2;
 	char *copy;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 	{
 		return ((void *)0);
 	}
 
 	size1 = 0;
-	while (s1[size1] != '\0')
+	if (s1 != NULL)
 	{
-		size1++;
+		while (s1[size1] != '\0')
+		{
+			size1++;
+		}
 	}
-
 	size2 = 0;
-	while (s2[size2] != '\0')
+	if (s2 != NULL)
 	{
-		size2++;
+		while (s2[size2] != '\0')
+		{
+			size2++;
+		}
 	}
 
 	copy = (char *)malloc((sizeof(char) * size1) + (sizeof(char) * size2) + 1);
