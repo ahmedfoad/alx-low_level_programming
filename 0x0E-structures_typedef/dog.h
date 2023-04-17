@@ -18,4 +18,6 @@ struct dog
 	char *owner; /* 8 bytes */
 };
 
+void init_dog(struct dog *d, char *name, float age, char *owner);
+
 #endif
