@@ -2,7 +2,8 @@
 #include "dog.h"
 
 /**
- * new_dog - creates a new dog
+ * new_dog - function that create a new obj
+ * of type dog_t struct
  * @name: name of dog
  * @age: age of dog
  * @owner: owner of dog
@@ -20,8 +21,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog == NULL)
 		return (NULL);
 	for (nl = 0; name[nl]; nl++)
-		;
-	nl++;
+		nl++;
 	dog->name = malloc(nl * sizeof(char));
 	if (dog->name == NULL)
 	{
@@ -32,8 +32,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		dog->name[i] = name[i];
 	dog->age = age;
 	for (ol = 0; owner[ol]; ol++)
-		;
-	ol++;
+		ol++;
 	dog->owner = malloc(ol * sizeof(char));
 	if (dog->owner == NULL)
 	{
