@@ -28,5 +28,8 @@ void free_list(list_t *head)
 		previous->next = NULL;
 		free(current);
 	}
+
+	if (head->str != NULL)
+		free(head->str);
 	free(head);
 }
