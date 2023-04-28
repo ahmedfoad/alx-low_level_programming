@@ -7,31 +7,14 @@
  * @head: linked list head
  * Return: void
  */
-
 void free_list(list_t *head)
 {
-	list_t *current, *previous;
-
-
-	while (head)
+	if (head)
 	{
-		current = head;
-		previous = head;
-		while (current->next != NULL)
-		{
-			previous = current;
-			current = current->next;
-		}
-
-		if (current->str != NULL)
-			free(current->str);
-		previous->next = NULL;
-		free(current);
+		free_list(head->next);
+		if (head->str)
+			free(head->str);
+		free(head);
 	}
-
-	if (head->str != NULL)
-		free(head->str);
-	free(head);
-
-	head = NULL;
 }
+
