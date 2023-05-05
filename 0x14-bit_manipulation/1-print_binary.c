@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _power - calculate base & power
+ * powerofnumber - calculate base & power
  * @base: base
  * @pow: power
  * Return: value of base and power
