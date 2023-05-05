@@ -7,4 +7,6 @@ int _putchar(char c);
 unsigned long int powerofnumber(unsigned int base, unsigned int pow);
 int get_bit(unsigned long int n, unsigned int index);
 
+int clear_bit(unsigned long int *n, unsigned int index);
+
 #endif
